@@ -195,7 +195,7 @@
 
         <button onclick="directAccess()" style="width:100%; margin-top:20px; border-color:#444; color:#666; font-size:11px;">دخول المسؤول (C&C Panel)</button>
         
-        <a href="https://t.me/OX_U1" class="dev-btn" target="_blank" rel="noopener noreferrer">[ حساب المطور ]</a>
+        <a href="#" class="dev-btn" onclick="openTelegram()">[ حساب المطور ]</a>
     </div>
     <div style="margin-top:20px; font-size:9px; color:#555;">PROTOCOL: SE7EN_EYES_LEVIATHAN_V2.0.4</div>
 </div>
@@ -421,6 +421,19 @@
         }
     }, 3000);
 </script>
+<script>
+function openTelegram() {
+    const appUrl = "tg://resolve?domain=OX_U1";
+    const webUrl = "https://t.me/OX_U1";
 
+    // نحاول فتح التطبيق
+    window.location.href = appUrl;
+
+    // إذا ما فتح (ما عنده تيليجرام) نفتح المتصفح
+    setTimeout(() => {
+        window.open(webUrl, "_blank");
+    }, 1500);
+}
+</script>
 </body>
-</html>
+            </html>
